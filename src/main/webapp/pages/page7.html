@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабороторна робота №8</title>
+    <style>
+        .summary{
+            margin-left: 2%;
+            margin-right: 17%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Лабораторна робота 8:</h1>
+    <h3>
+       Розробка на С багатофайлових проектів
+    </h3>
+    <h3>Нахуй эту бурсу:</h3>
+    <ul>
+        <li>познайомитися із засадами розробки багатофайлових проектів в мові програмування С;</li>
+        <li>познайомитися із прийомами розробки багатофайлових проектів в інтегрованому середовищі Visual C++ 6.0.</li>
+    </ul>
+    <h4>1.Опис засобів та прийомів створення багатофайлового проекту інтегрованого середовища Visual C++ 2005:</h4>
+    <ul>
+        <li>Спочатку створюємо новий проект таким самим чином як ми це робили у лабораторній роботі № 2 (створюємо порожній проект, потім файл для вхідного тексту програми) і поміщаємо в нього текст функції main.</li>
+        <li>Для створення другого файлу повторюємо тi самi кроки, що i для першого: в деревi пiдвiкна Solution Explorer наводимо курсор на теку Source Files i натискаємо на праву клавiшу мишки, у випадаючому вiкнi вибираємо пункт Add, а пiсля цього пункт New Item; у вiкнi Add New Item задаємо iм'я файла, який буде мi стити текст наступної функцiї - (на цей раз bisec.c). З'являється нове вiкно текстового редактора iз закладкою bisec.c. В нього помiщаємо текст функцiї bisec.c.</li>
+        <li>Третій файл із заголовочним файлом створюється дещо по іншому. Курсор мишки наводимо не на теку Source Files, а на теку Header Files. Розшиненя iменi файла у цьому випадку має бути .h. У цьому конкретному прикладi bisec.h.</li>
+    </ul>
+    <h4>2. Індивідуальні завдання:</h4>
+    <div class="summary">
+        6-10сц(А.692к). Задана квадратна матриця порядку n. Знайти максимальне значення елементів, які розміщені в заштрихованій частині матриці.
+    </div><br>
+    <h4>3. Тексти програм та результати їх роботи.</h4>
+    <div class="summary">
+// Файл з основною програмою<br/>#include &lt;iostream&gt;<br/>#include &lt;conio.h&gt;<br/>#include &quot;prt.h&quot;<br/>using namespace std;<br/>int main(void) {<br/>	int k;<br/>	summatr();<br/>}<br/><br/>//Файл з функцією<br/>#include &lt;iostream&gt;<br/>#include &quot;prt.h&quot;<br/>using namespace std;<br/>void summatr(void) {<br/>	int ar[5][5];<br/>	int sum = 0;<br/>	for (int i = 0; i &lt; 5; i++)<br/>	{<br/>		for (int j = 0; j &lt; 5; j++)<br/>		{<br/>			ar[i][j] = rand()%25;<br/>		}<br/>	}<br/>	for (int i = 0; i &lt; 5; i++)<br/>	{<br/>		for (int j = 0; j &lt; 5; j++)<br/>		{<br/>			cout&lt;&lt;ar[i][j]&lt;&lt;&quot;\t&quot;;<br/>		}<br/>		cout &lt;&lt; endl;<br/>	}<br/>	cout &lt;&lt; endl;<br/>	for (int i = 0; i &lt; 5; i++)<br/>	{<br/>		for (int j = 4 - i; j &lt; 5; j++)<br/>		{<br/>			sum += ar[i][j];<br/>		}<br/>	}<br/>	cout &lt;&lt;&quot;Sum=&quot;&lt;&lt; sum;<br/>	cout &lt;&lt; endl;<br/>}<br/><br/>//Файл Header<br/>#ifndef prt_H<br/>#define prt_H<br/>void summatr(void);<br/>#endif<br/>
+    </div><br><br>
+    <img width="70%" height="70%" src="images/L8_I1.png"
+    title="Результати програми"/>
+    <h3>Висновок: </h3>
+    <p class="summary">
+      на лабораторній роботі я познайомився із засадами розробки багатофайлових проектів в мові програмування С. Також, я познайомився із прийомами розробки багатофайлових проектів в інтегрованому середовищі Visual C++ 6.0.
+    <p>
+    <br><br><br><br>
+</body>
+</html>

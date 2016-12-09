@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабороторна робота №3</title>
+    <style>
+        .summary{
+            margin-left: 2%;
+            margin-right: 17%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Лабораторна робота 3:</h1>
+    <h3>
+        «Iнтегроване середовище розробки програм Visual C++ 2015 (робота з проектом) та складнiшi команди текстового редактора. Розв'язування на С найпростiших задач iз використанням стандартної функцiї виводу»»
+    </h3>
+    <h3>Мета роботи:</h3>
+    <ul>
+        <li>познайомитися iз засобами iнтегрованого середовища Visual C++ 2015 для роботи з проектом;</li>
+        <li>познайомитися з командами текстового редактора iнтегрованого середовища Visual C++ 2015;</li>
+        <li>познайомитися iз виразами мови С, операцiєю присвоювання та стандартною функцiєю виводу мови C</li>
+    </ul>
+    <h4>Перелiк команд (та вiдповiдних "горячих" клавiш) засобів роботи з проектом середовища Visual C++ 2015:</h4>
+    <ol>
+        <li>Команда Open (Ctrl+Shift+O ) – відповідає за відкриття файлу;</li>
+        <li>Команда Close Solution – відповідає за закриття файлу.</li>
+    </uo><br>
+    <table>
+        <tr><td>Кобінація клавіш</td><td>Команда</td></tr>
+        <tr><td>Ctrl+X</td><td>Вирізати</td></tr>
+        <tr><td>Ctrl+C</td><td>Копіювати</td></tr>
+        <tr><td>Ctrl+V</td><td>Вставити</td></tr>
+        <tr><td>Del</td><td>Видалити символ</td></tr>
+        <tr><td>Ctrl+Z</td><td>Відкат назад</td></tr>
+        <tr><td>Ctrl+Y</td><td>Відкат вперед</td></tr>
+        <tr><td>Ctrl+F</td><td>Пошук</td></tr>
+        <tr><td>Ctrl+H</td><td>Заміна</td></tr>
+    </table><br><br>
+    <h3>Текст програми:</h3>
+    <div>
+        #include <stdio.h><br>
+        <br>
+        #define PAGES   764<br>
+        #define RENT    2345.89<br>
+        #define STRING  "Outstanding acting"<br>
+        <br>
+        int main(int argc, char* argv[])<br>
+        {<br>
+            // integer<br>
+            printf("1  *%d*\n", PAGES);<br>
+            printf("2  *%2d*\n", PAGES);<br>
+            printf("3  *%10d*\n", PAGES);<br>
+            printf("4  *%-10d*\n", PAGES);<br>
+        <br>
+            printf("5  *%d**% d**% d**\n", 42, 42, -42);<br>
+            printf("6  *%5d**%5.3d**%05d**%05.3d**\n", 6, 6, 6, 6);<br>
+        <br>
+            // float<br>
+            printf("7  *%f*\n", RENT);<br>
+            printf("8  *%e*\n", RENT);<br>
+            printf("9  *%4.2f*\n", RENT);<br>
+            printf("10 *%3.1f*\n", RENT);<br>
+            printf("11 *%10.3f*\n", RENT);<br>
+            printf("12 *%10.3e*\n", RENT);<br>
+            printf("13 *%+4.2e*\n", RENT);<br>
+            printf("14 *%010.2f*\n", RENT);<br>
+        <br>
+            // string<br>
+            printf("15 *%2s*\n", STRING);<br>
+            printf("16 *%22s*\n", STRING);<br>
+            printf("17 *%22.5s*\n", STRING);<br>
+            printf("18 *%-22.5s*\n", STRING);<br>
+        <br>
+            return 0;<br>
+        }<br>
+    </div><br><br>
+    <img width="70%" height="70%" src="images/L3_I1.png"
+    title="Результати програми"/>
+    <h3>Висновок: </h3>
+    <p class="summary">
+        на лабораторній роботі ми познайомилися iз засобами iнтегрованого середовища Visual C++ 2015 для роботи з проектом, з командами текстового редактора iнтегрованого середовища Visual C++ 2015, iз виразами мови С, операцiєю присвоювання та стандартною функцiєю виводу мови C.
+    <p>
+    <br><br><br><br>
+</body>
+</html>

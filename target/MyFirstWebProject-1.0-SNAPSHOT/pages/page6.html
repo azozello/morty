@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабороторна робота №7</title>
+    <style>
+        .summary{
+            margin-left: 2%;
+            margin-right: 17%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Лабораторна робота 7:</h1>
+    <h4 class="summary">
+  «Розв'язування на С задач, які використовують файли для вводу та виводу даних»
+    </h4>
+    <h3>Мета роботи:</h3>
+    <ul>
+        <li>познайомитися iз засобами файлового вводу та виводу в мовi програмування С.</li>
+    </ul>
+    <h4>1.Індивідуальне завдання:</h4>
+    <div class="summary">
+5-10і(w). Задані дійсні числа x1, x2, . . . , x25. Отримати суму додатних та суму від’ємних членів цієї послідовності.
+Небхідно написати два варіанти програми:
+програма у якій ввід здійснюється з текстового файлу і вивід виконується в текстовий файл;
+програма у якій ввід здійснюється з бінарного файлу і вивід відбувається в бінарний файл.
+    </div><br>
+    <h4>2. Тексти програм та результати їх роботи</h4>
+    <div class="summary">
+1) <br> #include &lt;iostream&gt;<br/>#include &lt;fstream&gt;<br/>#include &lt;conio.h&gt;<br/>using namespace std;<br/>int main(){<br/>float arr[25];<br/>fstream F;<br/>F.open(&quot;E:\cpp.txt&quot;,ios::in);<br/>if(!F.is_open()){<br/>	cout&lt;&lt;&quot;File is not open&quot;&lt;&lt;endl;<br/>}<br/>else{<br/>	while(!F.eof()){<br/>	for(int i=0;i&lt;25;i++){<br/>		F&gt;&gt;arr[i];<br/>	}<br/>	}<br/>}<br/>  int sum1=0;<br/>  int sum2=0;<br/>  for(int i=0;i&lt;25;i++){<br/>  	if(arr[i]&gt;=0){<br/>	  	sum1+=arr[i];<br/>	  }<br/>	  else{<br/>  		sum2+=arr[i];<br/>  	}<br/>  }<br/>  F.close();<br/>  fstream F1;<br/>  F1.open(&quot;E:\cpp1.txt&quot;,ios::out);<br/>  F1&lt;&lt;sum1;<br/>  F1&lt;&lt;sum2;<br/>  F1.close();<br/>  F1.open(&quot;E:\cpp1.txt&quot;,ios::in);<br/>  if(!F1.is_open()){<br/>	cout&lt;&lt;&quot;File is not open&quot;&lt;&lt;endl;}<br/>	else{<br/>	int x;<br/>	while(!F1.eof()){<br/>		F1&gt;&gt;x;<br/>		cout&lt;&lt;x&lt;&lt;endl;<br/><br/><br/>	}<br/>  }<br/>  return 0;<br/>}<br/>
+    </div><br><br>
+    <img width="70%" height="70%" src="images/L7_I1.png"
+    title="Результати програми 1"/><br>
+    <div class="summary">
+2) <br> #include &lt;iostream&gt;<br/>#include &lt;fstream&gt;<br/>#include &lt;conio.h&gt;<br/>using namespace std;<br/>int main(){<br/>float arr[25];<br/><br/>fstream F;<br/>F.open(&quot;E:\cpp.txt&quot;,ios_base::binary|ios::out);<br/>for(int i=0;i&lt;25;i++){<br/>	arr[i]=random(20)-random(20);<br/>}<br/>for(int i=0;i&lt;25;i++){<br/>	F.write((char*)&amp;arr[i],sizeof arr[i]);<br/>}<br/>F.close();<br/>F.open(&quot;E:\cpp.txt&quot;,ios_base::binary|ios::in);<br/>if(!F.is_open()){<br/>	cout&lt;&lt;&quot;File is not open&quot;&lt;&lt;endl;<br/>}<br/>else{<br/>	while(!F.eof()){<br/>	for(int i=0;i&lt;25;i++){<br/>		F.read((char*)&amp;arr[i],sizeof arr[i]);<br/>	}<br/>	}<br/>}<br/>  int sum1=0;<br/>  int sum2=0;<br/>  for(int i=0;i&lt;25;i++){<br/>  	if(arr[i]&gt;=0){<br/>	  	sum1+=arr[i];<br/>	  }<br/>	  else{<br/>  		sum2+=arr[i];<br/>  	}<br/>  }<br/>  F.close();<br/>  fstream F1;<br/>  F1.open(&quot;E:\cpp4.txt&quot;,ios::binary|ios::out);<br/>  F1.write((char*)&amp;sum1,sizeof sum1);<br/>  F1.write((char*)&amp;sum2,sizeof sum2);<br/>  F1.close();<br/>  F1.open(&quot;E:\cpp4.txt&quot;,ios::binary|ios::in);<br/>  if(!F1.is_open()){<br/>	cout&lt;&lt;&quot;File is not open&quot;&lt;&lt;endl;}<br/>	else{<br/>	int x,y;<br/>	while(!F1.eof()){<br/>		F1.read((char*)&amp;x,sizeof x);<br/>		cout&lt;&lt;x&lt;&lt;endl;<br/>         <br/>	}<br/>  }<br/>  F1.close();<br/>  return 0;<br/>}<br/>
+    </div><br><br>
+    <img width="70%" height="70%" src="images/L7_I2.png"
+    title="Результати програми 2"/><br>
+    <h3>Висновок: </h3>
+    <p class="summary">
+на лабораторній роботі ми познайомилися iз засобами файлового вводу та виводу в мовi програмування С.
+    <p>
+    <br><br><br><br>
+</body>
+</html>
